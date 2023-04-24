@@ -1,6 +1,9 @@
 {
-  "imports": { "server": "https://deno.land/std@0.182.0/http/server.ts" },
+  "imports": {
+    "server": "https://deno.land/std@0.182.0/http/server.ts",
+    "dotenv": "https://deno.land/std/dotenv/mod.ts"
+  },
   "tasks": {
-    "dev": "deno run --watch --allow-net first_step.ts"
+    "dev": "deno run --watch --allow-all first_step.ts"
   }
 }

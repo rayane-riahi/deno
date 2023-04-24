@@ -1,6 +1,10 @@
-import { serve } from "server";
+import { Server } from "server";
+import { load } from "dotenv";
 
-const denolandApi = "https://api.github.com/users/denoland";
+const env = await load();
+const port = Number(env["port"]) || 8080;
+
+const denolandApi = env["dataApi"];
 
 const handler = async (_request: Request): Promise<Response> => {
   const resp = await fetch(denolandApi, {
@@ -20,4 +24,6 @@ const handler = async (_request: Request): Promise<Response> => {
   });
 };
 
-serve(handler);
+const server = new Server({ port, handler });
+
+await server.listenAndServe();
