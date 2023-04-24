@@ -1,3 +1,6 @@
 {
-  "imports": { "server": "https://deno.land/std@0.182.0/http/server.ts" }
+  "imports": { "server": "https://deno.land/std@0.182.0/http/server.ts" },
+  "tasks": {
+    "dev": "deno run --watch --allow-net first_step.ts"
+  }
 }
