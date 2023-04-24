@@ -1,3 +1,5 @@
 {
-  "imports": { "server": "https://deno.land/std@0.182.0/http/server.ts" }
+  "tasks": {
+    "dev": "deno run  --allow-read --allow-write file.ts"
+  }
 }
